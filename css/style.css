@@ -796,6 +796,8 @@ body {
   display: block;
   position: relative;
 
+  cursor: pointer;
+
   padding-left: 37px;
 
   font-size: 14px;
