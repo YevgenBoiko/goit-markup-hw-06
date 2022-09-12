@@ -406,6 +406,7 @@ body {
 }
 .container.one {
   display: flex;
+  align-items: baseline;
 }
 .fut.list {
   display: block;
@@ -430,7 +431,6 @@ body {
   margin-top: 0;
 }
 .second-fut {
-  padding-top: 12px;
   margin-right: 93px;
 }
 .social.futlink {
@@ -482,7 +482,6 @@ body {
 .followers {
   display: block;
 
-  padding-top: 12px;
   width: 570px;
 }
 .enter-mail {
@@ -576,7 +575,7 @@ body {
   width: 100%;
   height: 100%;
 
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms var(--timing-function);
 
   padding: 63px 24px;
@@ -725,7 +724,6 @@ body {
   border-radius: 4px;
   padding: 12px 42px;
 
-  margin-bottom: 10px;
   transition: border 250ms var(--timing-function);
 }
 .person:focus {
@@ -741,6 +739,7 @@ body {
 
 .form-field {
   position: relative;
+  margin-bottom: 10px;
 }
 .person-icon {
   position: absolute;
@@ -763,8 +762,10 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
-  margin-bottom: 20px;
   transition: border 250ms var(--timing-function);
+}
+.form-text {
+  margin-bottom: 20px;
 }
 .textarea:focus {
   border: 1px solid var(--accent-color);
@@ -791,7 +792,9 @@ body {
 
   margin: -1px;
 }
-
+.checkbox-field {
+  margin-bottom: 30px;
+}
 .check-text {
   display: block;
   position: relative;
@@ -803,8 +806,6 @@ body {
   font-size: 14px;
   line-height: 1.71;
   width: 100%;
-
-  margin-bottom: 30px;
 }
 
 .checkbox-icon {
@@ -822,6 +823,7 @@ body {
   border-radius: 2px;
   transition: background-color 250ms var(--timing-function);
 }
+
 .check-icon {
   display: flex;
   position: absolute;
@@ -837,15 +839,24 @@ body {
 
   background-origin: border-box;
 }
+
+.checkbox:focus + .checkbox-icon {
+  border-color: var(--accent-color);
+}
 .check-link {
   color: var(--accent-color);
 }
 .button.modal-but {
+  display: block;
+
   width: 200px;
   height: 50px;
 
   padding: 10px 52px;
   border: 0;
+
+  margin-left: auto;
+  margin-right: auto;
 
   font-family: 'Roboto';
   font-style: normal;
@@ -864,8 +875,4 @@ body {
 .button.modal-but:focus {
   background-color: var(--button-bgc);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-.form-button {
-  display: flex;
-  justify-content: center;
 }
